@@ -44,3 +44,8 @@ function anagrammedName(name) {
 		return name;
 	}
 }
+
+function friendsClick(name){
+	name.preventDefault();
+	$(".friends").click(anagrammedName);
+}
