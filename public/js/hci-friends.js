@@ -10,6 +10,10 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+	$(".friends a").click(function(e){
+		e.preventDefault();
+		$(this).html("<h3>" + anagrammedName($(this).text())+"</h3>");
+	});
 }
 
 function anagrammedName(name) {
@@ -47,5 +51,5 @@ function anagrammedName(name) {
 
 function friendsClick(name){
 	name.preventDefault();
-	$(".friends").click(anagrammedName);
+	
 }
